@@ -23,4 +23,9 @@ export class ShoppingListService {
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
 
+  addIngredients(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients); //permite colocar um array de elementos em uma lista de elementos
+    this.ingredientsChanged.emit(this.ingredients.slice()); //emite que os ingredientes mudaram com uma cópia deles
+  }
+
 }
