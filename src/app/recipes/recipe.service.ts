@@ -29,6 +29,10 @@ private recipes: Recipe[] = [
     return this.recipes.slice(); //slice => retorna uma cópia do array
   }
 
+  getRecipe(index: number) {
+    return this.recipes[index];
+  }
+
   addIngredientsToShopping(ingredient: Ingredient[]) {
     this.slService.addIngredients(ingredient);
   }
